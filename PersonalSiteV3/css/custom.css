@@ -1,0 +1,204 @@
+﻿.jumbotron {
+    margin-top: 20px;
+}
+
+body {
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+/*************************************
+    Highlight nav for current page
+**************************************/
+.active {
+    background: #3c749a;
+}
+
+
+/*********************************************
+    Custom Nav (overwrite Bootstrap styles)
+**********************************************/
+nav ul {
+    float: right;
+    margin: 0 35px 0 0;
+}
+
+    nav ul li {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    nav ul.dropdown-menu li a:hover {
+        background: #3c749a;
+    }
+
+    nav.navbar-default.navbar-fixed-top ul.dropdown-menu li.active a{
+        background: #3c749a;
+    }
+
+nav.navbar-default.navbar-fixed-top ul li a {
+    font-weight: bold;
+    color: #fff;
+    border: 5px solid rgba(0,0,0,0);
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav.navbar-default.navbar-fixed-top ul li:hover {
+    background: #3c749a;
+}
+
+nav.navbar-default.navbar-fixed-top ul li a:hover {
+    background: #3c749a;
+}
+
+nav ul.dropdown-menu {
+    background-color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul.dropdown-menu li {
+        width: 100%;
+    }
+
+    /************************
+        Hamburger Menu
+    *************************/
+
+    nav a.pull-right{
+        font-weight: bold;
+        color:#fff;
+        padding:10px;
+        text-decoration: none;
+        font-size: 1.5em;
+        display: none;
+    }
+    
+    /*
+        If the viewport is below 850px, hide the menu items and displayer the hamburger menu
+    */
+
+@media screen and (max-width: 850px) {
+
+    nav ul#nav-list {
+        display: none;
+    }
+
+    nav a.pull-right {
+        display: inline-block;
+    }
+
+    nav ul#nav-list.expanded {
+        float: none;
+        clear: both;
+        display: block;
+    }
+
+        nav ul#nav-list.expanded li {
+            display: block;
+        }
+
+            nav ul#nav-list.expanded li a {
+                display: block;
+                text-align: center;
+                font-size: 1em;
+            }
+
+    nav li.dropdown-menu ul.dropdown-menu {
+        width: 50%;
+        float: none;
+        margin: auto;
+        position: static;
+    }
+}
+
+/*
+    Side Navigation
+*/
+.sidenav{
+    height: 100%;
+    width: 0;
+    position:fixed;
+    z-index: 1030;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.9);
+    overflow-x:hidden;
+    padding-top:100px;
+    transition:.5s;
+}
+.sidenav a{
+    padding:8px 8px 8px 32px;
+    text-decoration: none;
+    font-size:25px;
+    color:#818181;
+    display:block;
+    transition:.3s;
+}
+
+.sidenav a:hover{
+    color:#f1f1f1;
+}
+
+.close-btn{
+    position: absolute;
+    top:50px;
+    right:25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+.button{
+    font-family: sans-serif;
+    background: rgba(0,0,0,.5);
+    height:100%;
+    width:20px;
+    z-index: 1030;
+    position: fixed;
+    left:0;
+    top:0;
+    cursor:pointer;
+}
+
+.vertical-text{
+    position:absolute;
+    top:45%;
+    left:0;
+    writing-mode: vertical-lr;
+    color:white;
+    font-weight:bold;
+}
+
+.thumb{
+    cursor:pointer;
+}
+
+#lightbox-container{
+    position: fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,.8);
+    text-align:center;
+    padding-top: 65px;
+    display:none;
+}
+
+#lightbox-container p{
+    color:#fff;
+}
+
+#lightbox-container img{
+    border: 10px solid grey;
+    margin:auto;
+}
+
+.ui-datepicker-month {
+    background-color: #111717;
+}
+.ui-datepicker-year {
+    background-color: #111717;
+}

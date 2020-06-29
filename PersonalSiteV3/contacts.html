@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Hall" />
+    <meta name="keywords" content="JavaScript Playground, JS, Introduction to JavaScript, JavaScript Fundamentals" />
+    <meta name="description" content="A demo site to learn JavaScript at Centriq Training.  Includes information about JavaScript, jQuery, and jQuery Plugins" />
+    <title>David Hall's Web Portfolio</title>
+
+    <!-- Bootstrap Theme -->
+    <link href="css/bootstrap-flatly-theme.min.css" rel="stylesheet" />
+
+    <!--Custom CSS-->
+    <link href="css/custom.css" rel="stylesheet" />
+	
+	<!--Favicon-->
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <!--Collapsible nav-->
+    <nav class="navbar-default navbar-fixed-top">
+        <a href="index.html" class="navbar-brand">My Web Portfolio</a>
+
+        <!--Hamburger Button-->
+        <a href="javascript:void(0)" class="pull-right" onclick="toggleNav()" id="menu-btn">
+            &#9776;
+        </a>
+
+        <ul id="nav-list" class="topnav">
+            <li>
+                <a href="index.html">
+                    <span class="glyphicon glyphicon-home"></span> Home
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    Links
+                </a>
+            </li>
+            <li class="active">
+                <a href="contacts.html">
+                    Contacts
+                </a>
+            </li>
+            <li>
+                <a href="resume.html">
+                   Resume
+                </a>
+            </li>
+            <!--Navbar Dropdown-->
+            <li class="dropdown">
+                <a href="jsLabs.html" class="dropdown-toggle"
+                   role="button" data-toggle="dropdown" target="_blank"
+                   aria-haspopup="true" aria-expanded="false">
+                    Projects<span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">
+                            C# Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            HTML5/JavaScript Projects
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav><!--/#navbar-->
+    <!--/Main Nav-->
+    <!--Page Header-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>My Contact Info</h1>
+        </div>
+    </div>
+    <!--/Page Header-->
+    <!--Main Content-->
+    <main class="container">
+        <div class="row">
+            <form action="#" method="get" onsubmit="validateForm(event)">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="contactName" name="name" class="form-control" placeholder="Name" />
+                            <span id="validationName" class="invalid"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" id="contactEmail" name="email" class="form-control" placeholder="Email" />
+                            <span id="validationEmail" class="invalid"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="Subject" />
+                            <span id="validationSubject" class="invalid"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="text" id="contactMessage" name="message" class="form-control" placeholder="Message" />
+                            <span id="validationMessage" class="invalid"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-success" value="Send Message" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <article class="col-md-4">
+                <h2 style="text-align:center">My LinkedIn</h2>
+                <ul id="highlights" style="text-align:center">
+                    <a href="https://www.linkedin.com/in/david-hall-18a5011b0/">Find Me on LinkedIn</a>
+                    <img src="img/mylinkedin.png" class="img-responsive thumb" />
+                </ul>
+            </article>
+            <article class="col-sm-4">
+                <h2 style="text-align:center">My Phone Number</h2>
+                <p style="text-align:center">
+                    <a href="tel:+01-618-979-1494">Call My Work Phone</a>
+                    <img src="img/pic2.jpg" class="img-responsive thumb" />
+                </p>
+            </article>
+            <article class="col-sm-4">
+                <h2 style="text-align:center">My Email</h2>
+                <p style="text-align:center">
+                    <a href="mailto:dhall242020@outlook.com">Send Me an Email</a>
+                    <img src="img/pic3.jpg" class="img-responsive thumb" />
+                </p>
+            </article>
+        </div>
+    </main>
+    <!--LightBox Container-->
+    <!--Dark Background is going to cover the screen-->
+    <div id="lightbox-container">
+        <p>
+            Click anywhere to close.
+        </p>
+        <!--lightbox content-->
+        <div id="lightbox-content">
+            <!--<img tag will be inserted here when a thumbnail is clicked-->
+        </div>        
+    </div>
+    <!--/Main Content-->
+    <!--Footer-->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">
+                &copy; <span id="copyright"></span>2020 David Hall
+            </p>
+            <a href="#" class="btn navbar-btn btn-danger pull-right">
+                Go to the top!
+            </a>
+        </div>
+    </nav>
+    <!--/Footer-->
+
+    <!--Admin Button-->
+    <div id="admin-btn" class="button" onclick="openAdminNav()">
+        <span class="vertical-text">ADMIN</span>
+    </div>
+
+    <!--Admin Nav-->
+    <div id="admin-nav" class="sidenav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeAdminNav()">&times;</a>
+        <a href="#">Users Admin</a>
+        <a accesskey="#">Roles Admin</a>
+    </div>
+
+    <!--Toggle Admin Nav-->
+    <script type="text/javascript">
+        function openAdminNav() {
+            document.getElementById('admin-btn').style.display = "none";
+            document.getElementById('admin-nav').style.width = "250px";
+        }
+        function closeAdminNav() {
+            document.getElementById('admin-btn').style.display = "block";
+            document.getElementById('admin-nav').style.width = "0";
+        }
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--JQuery Custom-->
+    <script src="js/jquerycode.js"></script>
+
+    <script src="js/validation.js"></script>
+
+    <!--Toggle Hamburger Menu-->
+    <script>
+        function toggleNav() {
+            let navList = document.getElementById('nav-list');
+            navList.classList.toggle('expanded');
+
+            //toggle Hamburger button/close button
+            let btnMenu = document.getElementById('menu-btn');
+            if (navList.classList.contains('expanded')) {
+                btnMenu.innerHTML = "&times;";
+            } else {
+                btnMenu.innerHTML = "&#9776;";
+            }
+        }
+    </script>
+</body>
+</html>
