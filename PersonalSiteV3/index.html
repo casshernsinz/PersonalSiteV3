@@ -72,7 +72,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="jslabs.html">
                             HTML5/JavaScript Projects
                         </a>
                     </li>
@@ -127,7 +127,6 @@
         </div>
     </nav>
     <!--/Footer-->
-
     <!--Admin Button-->
     <div id="admin-btn" class="button" onclick="openAdminNav()">
         <span class="vertical-text">ADMIN</span>
@@ -140,6 +139,17 @@
         <a accesskey="#">Roles Admin</a>
     </div>
 
+    <!--Toggle Admin Nav-->
+    <script type="text/javascript">
+        function openAdminNav() {
+            document.getElementById('admin-btn').style.display = "none";
+            document.getElementById('admin-nav').style.width = "250px";
+        }
+        function closeAdminNav() {
+            document.getElementById('admin-btn').style.display = "block";
+            document.getElementById('admin-nav').style.width = "0";
+        }
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 minified JavaScript -->

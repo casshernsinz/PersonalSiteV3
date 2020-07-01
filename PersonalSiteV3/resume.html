@@ -78,7 +78,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="jslabs.html">
                             HTML5/JavaScript Projects
                         </a>
                     </li>
@@ -98,13 +98,13 @@
     <!--Main Content-->
     <main class="container">
         <div class="row">
-            <article style="text-align:center; padding-left:22em" class="col-sm-8">
-                <h2>My Software Skills: Github</h2>                
+            <article class="col-sm-8; col-sm-pull-4">
+                <h2>My Software Skills: Github</h2>
                 <div id="accordion">
                     <h3>C#</h3>
                     <div>
                         <p>
-                            #
+                            <a href="https://github.com/casshernsinz/CarLot"class="btn; btn-link" target="_blank">Click for Car Lot Project</a>
                         </p>
                     </div>
                     <h3>JavaScript</h3>
@@ -126,7 +126,7 @@
                         </p>
                     </div>
                 </div>
-            </article>           
+            </article>
             <!--<article class="col-sm-4">
                 <div id="tabs">
                     <ul>
@@ -205,6 +205,18 @@
         <a href="#">Users Admin</a>
         <a accesskey="#">Roles Admin</a>
     </div>
+
+    <!--Toggle Admin Nav-->
+    <script type="text/javascript">
+        function openAdminNav() {
+            document.getElementById('admin-btn').style.display = "none";
+            document.getElementById('admin-nav').style.width = "250px";
+        }
+        function closeAdminNav() {
+            document.getElementById('admin-btn').style.display = "block";
+            document.getElementById('admin-nav').style.width = "0";
+        }
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

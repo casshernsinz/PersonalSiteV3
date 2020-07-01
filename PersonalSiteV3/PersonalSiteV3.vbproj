@@ -103,6 +103,7 @@
     <Content Include="img\picOfMe.jpg" />
     <Content Include="index.html" />
     <Content Include="contacts.html" />
+    <Content Include="jslabs.html" />
     <Content Include="projects.html" />
     <Content Include="resume.html" />
     <Content Include="links.html" />
