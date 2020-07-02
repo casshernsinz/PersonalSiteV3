@@ -38,10 +38,11 @@ function displayAreaOfCircle() {
 
 function displayAreaOfSquare() {
 
-    let dimOfSquare = document.getElementById('dimOfSquare').value;
-    let areaOfSquare = document.getElementById('areaOfSquare').value;
+    var dimOfSquare = document.getElementById('dimOfSquare').value;
 
-    areaOfSquare.textContent = dimOfSquare * dimOfSquare;
+    var areaOfSquare = document.getElementById('areaOfSquare');
+
+    areaOfSquare.textContent = dimOfSquare ** 2;
 }
 
 function AreaOfTriangle() {
