@@ -247,7 +247,9 @@
         $(function () {
             //Accordian function call
             $("#accordion").accordion();
-            $("#accordion2").accordion();
+            $("#accordion2").accordion({
+                collapsible: true
+            });
             //DatePicker function call
             $("#datepicker").datepicker({
                 changeMonth: true,
