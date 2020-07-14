@@ -23,7 +23,7 @@ function displayTempFarenheit() {
 
 let loopMultipleSeven = document.getElementById('loopSeven');
 
-for (let i = 1; i <= 30; i++) {
+for (let i = 1; i <= 7; i++) {
     loopMultipleSeven.innerHTML += i*7 + "<br/>";
 }
 
